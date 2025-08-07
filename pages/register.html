@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gardening Planner - Register</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Shared Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <span class="logo-icon">🌿</span>
+            <h1>Gardening Planner</h1>
+            <button class="navbar-toggler" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="navbar-collapse">
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="active"><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Registration Form -->
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2>Create Account</h2>
+                <p>Start your gardening journey</p>
+            </div>
+            
+            <form class="auth-form" id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Full Name</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="registerName" placeholder="John Doe" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="registerEmail" placeholder="your@email.com" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="registerPassword" placeholder="••••••••" required>
+                        <button type="button" class="toggle-password" aria-label="Show password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-hints">
+                        <p class="hint" data-requirement="length">At least 8 characters</p>
+                        <p class="hint" data-requirement="number">Contains a number</p>
+                        <p class="hint" data-requirement="special">Contains a special character</p>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerConfirm">Confirm Password</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="registerConfirm" placeholder="••••••••" required>
+                    </div>
+                </div>
+                
+                <div class="form-group terms">
+                    <label class="terms-label">
+                        <input type="checkbox" id="agreeTerms" required>
+                        <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn-auth">Create Account</button>
+                
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="login.html">Login here</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../js/auth.js"></script>
+</body>
+</html>
