@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gardening Planner - Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <span class="logo-icon">🌿</span>
+            <h1>Gardening Planner</h1>
+            <button class="navbar-toggler" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="navbar-collapse">
+            <ul class="nav-links">
+                <li class="active"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-plus-circle"></i> Add Plant</a></li>
+                <li><a href="#"><i class="fas fa-project-diagram"></i> Layout Planner</a></li>
+                <li><a href="#"><i class="fas fa-book"></i> Journal</a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+        <!-- Quick Summary Cards -->
+        <section class="summary-cards">
+            <div class="summary-card">
+                <div class="card-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Total Plants</h3>
+                    <p>24</p>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="card-icon">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Tasks Due Today</h3>
+                    <p>5</p>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="card-icon">
+                    <i class="fas fa-apple-alt"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Next Harvest</h3>
+                    <p>Tomatoes (3 days)</p>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="card-icon">
+                    <i class="fas fa-bug"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Pests Reported</h3>
+                    <p>2</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+            <!-- Your Plants Section -->
+            <section class="your-plants">
+                <div class="section-header">
+                    <h2><i class="fas fa-leaf"></i> Your Plants</h2>
+                    <button class="btn-add"><i class="fas fa-plus"></i> Add Plant</button>
+                </div>
+                <div class="plants-grid">
+                    <!-- Plant Card 1 -->
+                    <div class="plant-card">
+                        <div class="plant-image" style="background-image: url('https://via.placeholder.com/150')"></div>
+                        <div class="plant-info">
+                            <h3>Aloe Vera</h3>
+                            <p class="plant-species">Aloe barbadensis miller</p>
+                            <div class="plant-status">
+                                <span class="status-label">Last watered:</span>
+                                <span class="status-value">2 days ago</span>
+                            </div>
+                            <div class="plant-actions">
+                                <button class="btn-view"><i class="fas fa-eye"></i></button>
+                                <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Plant Card 2 -->
+                    <div class="plant-card">
+                        <div class="plant-image" style="background-image: url('https://via.placeholder.com/150')"></div>
+                        <div class="plant-info">
+                            <h3>Basil</h3>
+                            <p class="plant-species">Ocimum basilicum</p>
+                            <div class="plant-status">
+                                <span class="status-label">Next fertilize:</span>
+                                <span class="status-value">in 5 days</span>
+                            </div>
+                            <div class="plant-actions">
+                                <button class="btn-view"><i class="fas fa-eye"></i></button>
+                                <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Plant Card 3 -->
+                    <div class="plant-card">
+                        <div class="plant-image" style="background-image: url('https://via.placeholder.com/150')"></div>
+                        <div class="plant-info">
+                            <h3>Tomato</h3>
+                            <p class="plant-species">Solanum lycopersicum</p>
+                            <div class="plant-status">
+                                <span class="status-label">Harvest ready:</span>
+                                <span class="status-value">in 3 days</span>
+                            </div>
+                            <div class="plant-actions">
+                                <button class="btn-view"><i class="fas fa-eye"></i></button>
+                                <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Plant Card 4 -->
+                    <div class="plant-card">
+                        <div class="plant-image" style="background-image: url('https://via.placeholder.com/150')"></div>
+                        <div class="plant-info">
+                            <h3>Lavender</h3>
+                            <p class="plant-species">Lavandula</p>
+                            <div class="plant-status">
+                                <span class="status-label">Last pruned:</span>
+                                <span class="status-value">1 week ago</span>
+                            </div>
+                            <div class="plant-actions">
+                                <button class="btn-view"><i class="fas fa-eye"></i></button>
+                                <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sidebar with Reminders and Weather -->
+            <aside class="sidebar">
+                <!-- Reminders Section -->
+                <section class="reminders">
+                    <div class="section-header">
+                        <h2><i class="fas fa-bell"></i> Upcoming Reminders</h2>
+                    </div>
+                    <ul class="reminders-list">
+                        <li class="reminder-item">
+                            <div class="reminder-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <div class="reminder-details">
+                                <h4>Water Aloe Vera</h4>
+                                <p class="reminder-due">Due in 2 days</p>
+                            </div>
+                            <div class="reminder-actions">
+                                <button class="btn-complete"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="reminder-item">
+                            <div class="reminder-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <div class="reminder-details">
+                                <h4>Fertilize Basil</h4>
+                                <p class="reminder-due">Due tomorrow</p>
+                            </div>
+                            <div class="reminder-actions">
+                                <button class="btn-complete"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                        <li class="reminder-item completed">
+                            <div class="reminder-icon">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                            <div class="reminder-details">
+                                <h4>Prune Lavender</h4>
+                                <p class="reminder-due">Completed today</p>
+                            </div>
+                            <div class="reminder-actions">
+                                <button class="btn-undo"><i class="fas fa-undo"></i></button>
+                            </div>
+                        </li>
+                        <li class="reminder-item">
+                            <div class="reminder-icon">
+                                <i class="fas fa-apple-alt"></i>
+                            </div>
+                            <div class="reminder-details">
+                                <h4>Harvest Tomatoes</h4>
+                                <p class="reminder-due">Due in 3 days</p>
+                            </div>
+                            <div class="reminder-actions">
+                                <button class="btn-complete"><i class="fas fa-check"></i></button>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Weather Section -->
+                <section class="weather">
+                    <div class="section-header">
+                        <h2><i class="fas fa-cloud-sun"></i> Weather Info</h2>
+                    </div>
+                    <div class="current-weather">
+                        <div class="weather-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div class="weather-details">
+                            <p class="weather-temp">24°C</p>
+                            <p class="weather-desc">Sunny</p>
+                        </div>
+                    </div>
+                    <div class="weather-forecast">
+                        <div class="forecast-day">
+                            <p>Tomorrow</p>
+                            <i class="fas fa-cloud-sun"></i>
+                            <p>22°C</p>
+                        </div>
+                        <div class="forecast-day">
+                            <p>Wed</p>
+                            <i class="fas fa-cloud-rain"></i>
+                            <p>19°C</p>
+                        </div>
+                        <div class="forecast-day">
+                            <p>Thu</p>
+                            <i class="fas fa-cloud"></i>
+                            <p>20°C</p>
+                        </div>
+                    </div>
+                    <div class="weather-alert">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Rain expected on Wednesday</p>
+                    </div>
+                </section>
+
+                <!-- Journal Preview -->
+                <section class="journal-preview">
+                    <div class="section-header">
+                        <h2><i class="fas fa-book"></i> Recent Journal Entries</h2>
+                    </div>
+                    <ul class="journal-entries">
+                        <li class="journal-entry">
+                            <h4>Tomatoes Growing Well</h4>
+                            <p class="entry-date">Today, 10:30 AM</p>
+                            <p class="entry-preview">Noticed first red tomatoes appearing on the...</p>
+                        </li>
+                        <li class="journal-entry">
+                            <h4>Pruned the Lavender</h4>
+                            <p class="entry-date">Yesterday, 4:15 PM</p>
+                            <p class="entry-preview">Completed seasonal pruning of the lavendar...</p>
+                        </li>
+                    </ul>
+                    <button class="btn-view-all">View All Entries</button>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Gardening Planner v1.0 · © 2023</p>
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Help</a>
+            <a href="#">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/navbar.js"></script>
+</body>
+</html>

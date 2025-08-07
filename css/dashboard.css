@@ -1,0 +1,462 @@
+/* Main Dashboard Container */
+.dashboard-container {
+    padding: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Summary Cards */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.summary-card {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+}
+
+.card-content h3 {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.card-content p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+/* Content Grid Layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+}
+
+/* Your Plants Section */
+.your-plants {
+    margin-bottom: 2rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-add {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-add:hover {
+    background-color: var(--primary-dark);
+}
+
+.plants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.plant-card {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.plant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.plant-image {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.plant-info {
+    padding: 1.2rem;
+}
+
+.plant-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: var(--primary-dark);
+}
+
+.plant-species {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.plant-status {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.status-label {
+    color: var(--text-light);
+}
+
+.status-value {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.plant-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-view, .btn-edit, .btn-delete {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-view {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.btn-edit {
+    background-color: #bbdefb;
+    color: #0d47a1;
+}
+
+.btn-delete {
+    background-color: #ffcdd2;
+    color: #c62828;
+}
+
+.btn-view:hover, .btn-edit:hover, .btn-delete:hover {
+    opacity: 0.8;
+}
+
+/* Sidebar Sections */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Reminders Section */
+.reminders-list {
+    list-style: none;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.reminder-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    transition: var(--transition);
+}
+
+.reminder-item:last-child {
+    border-bottom: none;
+}
+
+.reminder-item:hover {
+    background-color: #f5f5f5;
+}
+
+.reminder-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #e8f5e9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+.reminder-details {
+    flex: 1;
+}
+
+.reminder-details h4 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.reminder-due {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.reminder-actions {
+    margin-left: auto;
+}
+
+.btn-complete, .btn-undo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.btn-complete {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.btn-undo {
+    background-color: #e0e0e0;
+    color: var(--text-light);
+}
+
+.completed {
+    opacity: 0.7;
+    background-color: #f5f5f5;
+}
+
+.completed .reminder-due {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Weather Section */
+.weather {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.current-weather {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.weather-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.weather-temp {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.weather-desc {
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.weather-forecast {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}
+
+.forecast-day {
+    text-align: center;
+}
+
+.forecast-day i {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: var(--primary-color);
+}
+
+.weather-alert {
+    background-color: #fff3e0;
+    padding: 0.8rem;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #e65100;
+    font-size: 0.9rem;
+}
+
+.weather-alert i {
+    font-size: 1.2rem;
+}
+
+/* Journal Preview */
+.journal-preview {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.journal-entries {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.journal-entry {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.journal-entry:last-child {
+    border-bottom: none;
+}
+
+.journal-entry h4 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: var(--primary-dark);
+}
+
+.entry-date {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 0.3rem;
+}
+
+.entry-preview {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.btn-view-all {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: var(--transition);
+}
+
+.btn-view-all:hover {
+    background-color: var(--primary-light);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--white);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .dashboard-container {
+        padding: 1rem;
+    }
+    
+    .plants-grid {
+        grid-template-columns: 1fr;
+    }
+}
